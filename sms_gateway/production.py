@@ -5,7 +5,7 @@ DEBUG = False
 SECRET_KEY = os.getenv("SECRET_KEY")
 PROD_HOSTS = os.getenv("PROD_HOSTS")
 
-ALLOWED_HOSTS = ['127.0.0.1:5500']
+ALLOWED_HOSTS = ['guidancesmsgateway.pythonanywhere.com']
 ALLOWED_HOSTS.append(PROD_HOSTS)
 
 STATIC_ROOT = '/home/attendancehub/Attendance-System/static'
