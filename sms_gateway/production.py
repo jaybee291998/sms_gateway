@@ -4,7 +4,7 @@ DEBUG = False
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 PROD_HOSTS = os.getenv("PROD_HOSTS")
-
+print(f'prd pass: {os.getenv("PROD_DB_PASS")}')
 ALLOWED_HOSTS = []
 ALLOWED_HOSTS.append(PROD_HOSTS)
 
