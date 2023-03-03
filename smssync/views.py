@@ -35,7 +35,7 @@ def task(request):
 				'messages': serializer.data
 			}
 		}
-		pks = [task['id'] for task in serializer.data]
+		pks = [task['uuid'] for task in serializer.data]
 		Task.objects.filter(pk__in=pks).delete()
 		# print(serializer.data)
 		return Response(payload, status=status.HTTP_200_OK)
