@@ -35,8 +35,22 @@ def task(request):
 				'messages': serializer.data
 			}
 		}
-		print(serializer.data)
+		pks = [task['id'] for task in serializer.data]
+		Task.objects.filter(pk__in=pks).delete()
+		# print(serializer.data)
 		return Response(payload, status=status.HTTP_200_OK)
+	# queued_messages = request.data.get('queued_messages')
+	# if queued_messages is not None:
+	# 	message_uuids = []
+	# 	if len(queued_messages) != 0:
+	# 		queued_messages_int = [str(pk) for pk in queued_messages]
+	# 		Task.objects.filter(pk__in=queued_messages_int).delete()
+	# 		message_uuids = queued_messages
+	# 		print(message_uuids)
+	# 		return Response({"message_uuids":message_uuids}, status=status.HTTP_200_OK)
+	# 	return Response({"message_uuids":message_uuids}, status=status.HTTP_200_OK)
+		
+
 	print(request.data)
 	p = {
 		"payload":{
