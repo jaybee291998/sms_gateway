@@ -25,6 +25,8 @@ def task(request):
 		serializer = TaskSerializer(tasks, many=True)
 		for task in serializer.data:
 			task['uuid'] = task['id']
+			del task['id']
+			del task['gateway']
 		# serializer.data['uuid'] = 'jayvee'
 		payload = {
 			'payload':{
@@ -35,6 +37,7 @@ def task(request):
 		}
 		print(serializer.data)
 		return Response(payload, status=status.HTTP_200_OK)
+	print(request.data)
 	p = {
 		"payload":{
 			"success":True,
