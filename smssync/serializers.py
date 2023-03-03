@@ -26,3 +26,8 @@ class TaskSerializer(DynamicFieldsModelSerializer):
     class Meta:
         model = Task
         fields = '__all__'
+
+class TaskPostSerializer(serializers.Serializer):
+	api_key 		= serializers.CharField(max_length=13)
+	to 				= serializers.CharField(max_length=32)
+	message			= serializers.CharField(max_length=2048)
