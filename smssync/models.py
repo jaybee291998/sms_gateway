@@ -6,8 +6,8 @@ from account.models import CustomUser
 class Gateway(models.Model):
 	user 		= models.ForeignKey(CustomUser, related_name='gateways', on_delete=models.CASCADE, null=True)
 	name 		= models.CharField(max_length=64, null=True)
-	secret 		= models.CharField(max_length=13, null=True)
-	api_key 	= models.CharField(max_length=13, null=True)
+	secret 		= models.CharField(max_length=13, null=True, blank=True)
+	api_key 	= models.CharField(max_length=13, null=True, blank=True)
 
 	def __str__(self):
 		return f'{self.name} - {user}'
