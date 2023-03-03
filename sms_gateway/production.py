@@ -5,21 +5,21 @@ DEBUG = False
 SECRET_KEY = os.getenv("SECRET_KEY")
 PROD_HOSTS = os.getenv("PROD_HOSTS")
 
-ALLOWED_HOSTS = ['guidancesmsgateway.pythonanywhere.com']
+ALLOWED_HOSTS = []
 ALLOWED_HOSTS.append(PROD_HOSTS)
 
-STATIC_ROOT = '/home/attendancehub/Attendance-System/static'
+STATIC_ROOT = '/home/smsguidancegateway/sms_gateway/static'
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = '/home/attendancehub/Attendance-System/static/media'
+MEDIA_ROOT = '/home/smsguidancegateway/sms_gateway/static/media'
 
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'attendancehub$default',
-        'USER': 'attendancehub',
+        'NAME': 'smsguidancegateway$default',
+        'USER': 'guidancesmsgatew',
         'PASSWORD': os.getenv("PROD_DB_PASS"),
         'HOST': os.getenv("PROD_DB_HOST"),
     }
