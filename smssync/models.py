@@ -1,3 +1,4 @@
+import random, string
 from django.db import models
 
 from account.models import CustomUser
