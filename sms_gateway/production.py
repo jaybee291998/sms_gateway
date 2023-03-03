@@ -18,7 +18,7 @@ MEDIA_ROOT = '/home/smsguidancegateway/sms_gateway/static/media'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'smsguidancegateway$default',
+        'NAME': 'guidancesmsgatew$default',
         'USER': 'guidancesmsgatew',
         'PASSWORD': os.getenv("PROD_DB_PASS"),
         'HOST': os.getenv("PROD_DB_HOST"),
