@@ -1,5 +1,6 @@
 from django.urls import path
+from . import views
 
 urlpatterns = [
-    # path('site/', admin.site.urls),
+    path('', views.task, name='task'),
 ]

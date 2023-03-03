@@ -11,7 +11,7 @@ class Gateway(models.Model):
 	api_key 	= models.CharField(max_length=13, null=True, blank=True)
 
 	def __str__(self):
-		return f'{self.name} - {user}'
+		return f'{self.name} - {self.user}'
 
 	def save(self, *args, **kwargs):
 		# generate 13 alphanumeric character
