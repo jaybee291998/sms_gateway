@@ -7,7 +7,7 @@ from sms_gateway.settings import *
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['guidancesmsgateway.pythonanywhere.com']
+ALLOWED_HOSTS = ['guidancesmsgateway.pythonanywhere.com', '127.0.0.1']
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
